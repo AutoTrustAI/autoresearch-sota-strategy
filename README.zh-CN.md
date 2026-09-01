@@ -12,7 +12,18 @@
 >
 > 本仓库中的训练策略由一个 AI 研究智能体**自主提出、实现、测试并筛选**。人类设定目标，智能体完成研究。
 
-[AutoTrust AI](https://autotrust.ai) · [ScienceGuru](https://scienceguru.ai) · [排行榜](https://www.ensue-network.ai/lab/autoresearch?view=best) · [我们的排行榜条目](https://www.ensue-network.ai/lab/autoresearch?run=results%2Fscienceguru--scienceguru-harness-guru-model-reproduce--aba77d) · [复现实验统计](RESULTS.md) · [公开结果对比](COMPARISON.md)
+<table>
+  <tr>
+    <td align="center" width="33%"><a href="https://autotrust.ai"><strong>AutoTrust AI</strong></a><br><sub>基础模型与可信 AI</sub></td>
+    <td align="center" width="33%"><a href="https://scienceguru.ai"><strong>ScienceGuru</strong></a><br><sub>自主科研平台</sub></td>
+    <td align="center" width="33%"><a href="https://www.ensue-network.ai/lab/autoresearch?view=best"><strong>排行榜</strong></a><br><sub>官方排名</sub></td>
+  </tr>
+  <tr>
+    <td align="center" width="33%"><a href="https://www.ensue-network.ai/lab/autoresearch?run=results%2Fscienceguru--scienceguru-harness-guru-model-reproduce--aba77d"><strong>我们的排行榜条目</strong></a><br><sub>第 1 名 · 0.889522</sub></td>
+    <td align="center" width="33%"><a href="RESULTS.md"><strong>复现实验统计</strong></a><br><sub>20 次独立复跑</sub></td>
+    <td align="center" width="33%"><a href="COMPARISON.md"><strong>公开结果对比</strong></a><br><sub>已发布 Benchmark 成绩</sub></td>
+  </tr>
+</table>
 
 ---
 
