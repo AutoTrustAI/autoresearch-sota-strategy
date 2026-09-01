@@ -51,15 +51,15 @@
 
 以下仅是截至 2026-09-01 的公开结果快照。单次最好、均值、中位数，以及 B200 与 H100/H200 结果不能机械排名；完整硬件、统计口径和固定来源见 [COMPARISON.md](COMPARISON.md)。
 
-| 团队 / 系统 | 报告的 `val_bpb` | 主要口径 |
-|---|---:|---|
-| **scienceguru harness + guru turbo 1.0** | **0.889522** | Ensue 正式单次；1×B200；另有同 SHA 20 次均值 0.8896563 |
-| Ensue `vora` | 0.899885 | 社区正式单次；1×B200 |
-| 腾讯混元 Hyra | 0.901543 | 单次完整日志；1×B200 |
-| HiLoop | 0.9016 | 25 次交错确认中位数；最佳单次 0.8999；1×B200 |
-| Recursive（田渊栋所在团队） | 0.9108745 | 10 个随机 seed 均值；1×B200 |
-| Imbue Catalyst | 0.9361 | 340 次搜索后的单点评估；1×H100 |
-| SkyPilot | 0.974 | 约 700 次有效实验中的最好观察值；H100/H200 搜索池 |
+| 团队 / 系统 | 报告的 `val_bpb` | 主要口径 | 一手来源 |
+|---|---:|---|---|
+| **scienceguru harness + guru turbo 1.0** | **0.889522** | Ensue 正式单次；1×B200；另有同 SHA 20 次均值 0.8896563 | [Ensue result](https://www.ensue-network.ai/lab/autoresearch?run=results%2Fscienceguru--scienceguru-harness-guru-model-reproduce--aba77d)、[20 次统计](RESULTS.md) |
+| Ensue `vora` | 0.899885 | 社区正式单次；1×B200 | [Ensue result](https://www.ensue-network.ai/lab/autoresearch?run=results%2Fvora--shared-trigram-ve-single-table--4f0fa4ed) |
+| 腾讯混元 Hyra | 0.901543 | 单次完整日志；1×B200 | [官方 README](https://github.com/Tencent-Hunyuan/Hyra-results/blob/26ebfbe7d491e6521d8bb5fc21fe88bb31460825/AI4AI/nanochat_autoresearch/README.md)、[完整日志](https://github.com/Tencent-Hunyuan/Hyra-results/blob/26ebfbe7d491e6521d8bb5fc21fe88bb31460825/AI4AI/nanochat_autoresearch/FULL_TRAINING_LOG_0.901543.log) |
+| HiLoop | 0.9016 | 25 次交错确认中位数；最佳单次 0.8999；1×B200 | [官方博客](https://hiloop.ai/blog/search-is-enough/)、[固定提交](https://github.com/hiloopai/search-is-enough/blob/28d677941d1bbd7fe263e5e95894e16b5c6a28e0/README.md) |
+| Recursive（田渊栋所在团队） | 0.9108745 | 10 个随机 seed 均值；1×B200 | [官方文章](https://www.recursive.com/articles/first-steps-toward-automated-ai-research)、[原始 CSV](https://github.com/recursive-org/first-steps-toward-automated-ai-research/blob/a962ec43e2e3d7c018e59a2ece623fe6e232fdfb/nanochat_autoresearch/results/val_bpb.csv) |
+| Imbue Catalyst | 0.9361 | 340 次搜索后的单点评估；1×H100 | [官方研究博客](https://imbue.com/blog/2026-07-20-imbue-catalyst-nanochat) |
+| SkyPilot | 0.974 | 约 700 次有效实验中的最好观察值；H100/H200 搜索池 | [官方博客](https://skypilot.ai/blog/scaling-autoresearch)、[复现实例](https://github.com/skypilot-org/skypilot/tree/8b1c320078f5e5c148bd1826ab4d0d9aa6ed4c25/examples/autoresearch) |
 
 ## 策略简介
 
