@@ -62,7 +62,7 @@
 环境要求：Linux、单张约 180 GB 显存的 NVIDIA B200、可用 CUDA，以及足够的本地数据缓存和磁盘空间。代码在非 Blackwell GPU 上没有 attention fallback。
 
 ```bash
-git clone <THIS_PRIVATE_REPOSITORY_URL>
+git clone https://github.com/aajing/autoresearch-sota-strategy.git
 cd autoresearch-sota-strategy
 uv sync --frozen
 uv run prepare.py
