@@ -14,14 +14,14 @@
 
 <table width="100%">
   <tr>
-    <td align="center" width="33%"><a href="https://autotrust.ai"><strong>AutoTrust AI</strong></a><br><sub>Foundation models &amp; trusted AI</sub></td>
-    <td align="center" width="33%"><a href="https://scienceguru.ai"><strong>ScienceGuru</strong></a><br><sub>Autonomous research</sub></td>
-    <td align="center" width="33%"><a href="https://www.ensue-network.ai/lab/autoresearch?view=best"><strong>Leaderboard</strong></a><br><sub>Official rankings</sub></td>
+    <td align="center" width="280"><a href="https://autotrust.ai"><strong>AutoTrust AI</strong></a><br><sub>Foundation models &amp; trusted AI</sub></td>
+    <td align="center" width="280"><a href="https://scienceguru.ai"><strong>ScienceGuru</strong></a><br><sub>Autonomous research</sub></td>
+    <td align="center" width="280"><a href="https://www.ensue-network.ai/lab/autoresearch?view=best"><strong>Leaderboard</strong></a><br><sub>Official rankings</sub></td>
   </tr>
   <tr>
-    <td align="center" width="33%"><a href="https://www.ensue-network.ai/lab/autoresearch?run=results%2Fscienceguru--scienceguru-harness-guru-model-reproduce--aba77d"><strong>Our leaderboard entry</strong></a><br><sub>Rank #1 · 0.889522</sub></td>
-    <td align="center" width="33%"><a href="RESULTS.md"><strong>Reproduction stats</strong></a><br><sub>20 independent runs</sub></td>
-    <td align="center" width="33%"><a href="COMPARISON.md"><strong>Public comparison</strong></a><br><sub>Published benchmark results</sub></td>
+    <td align="center" width="280"><a href="https://www.ensue-network.ai/lab/autoresearch?run=results%2Fscienceguru--scienceguru-harness-guru-model-reproduce--aba77d"><strong>Our leaderboard entry</strong></a><br><sub>Rank #1 · 0.889522</sub></td>
+    <td align="center" width="280"><a href="RESULTS.md"><strong>Reproduction stats</strong></a><br><sub>20 independent runs</sub></td>
+    <td align="center" width="280"><a href="COMPARISON.md"><strong>Public comparison</strong></a><br><sub>Published benchmark results</sub></td>
   </tr>
 </table>
 

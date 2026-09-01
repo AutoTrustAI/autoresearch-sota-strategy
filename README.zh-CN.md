@@ -14,14 +14,14 @@
 
 <table width="100%">
   <tr>
-    <td align="center" width="33%"><a href="https://autotrust.ai"><strong>AutoTrust AI</strong></a><br><sub>基础模型与可信 AI</sub></td>
-    <td align="center" width="33%"><a href="https://scienceguru.ai"><strong>ScienceGuru</strong></a><br><sub>自主科研平台</sub></td>
-    <td align="center" width="33%"><a href="https://www.ensue-network.ai/lab/autoresearch?view=best"><strong>排行榜</strong></a><br><sub>官方排名</sub></td>
+    <td align="center" width="280"><a href="https://autotrust.ai"><strong>AutoTrust AI</strong></a><br><sub>基础模型与可信 AI</sub></td>
+    <td align="center" width="280"><a href="https://scienceguru.ai"><strong>ScienceGuru</strong></a><br><sub>自主科研平台</sub></td>
+    <td align="center" width="280"><a href="https://www.ensue-network.ai/lab/autoresearch?view=best"><strong>排行榜</strong></a><br><sub>官方排名</sub></td>
   </tr>
   <tr>
-    <td align="center" width="33%"><a href="https://www.ensue-network.ai/lab/autoresearch?run=results%2Fscienceguru--scienceguru-harness-guru-model-reproduce--aba77d"><strong>我们的排行榜条目</strong></a><br><sub>第 1 名 · 0.889522</sub></td>
-    <td align="center" width="33%"><a href="RESULTS.md"><strong>复现实验统计</strong></a><br><sub>20 次独立复跑</sub></td>
-    <td align="center" width="33%"><a href="COMPARISON.md"><strong>公开结果对比</strong></a><br><sub>已发布 Benchmark 成绩</sub></td>
+    <td align="center" width="280"><a href="https://www.ensue-network.ai/lab/autoresearch?run=results%2Fscienceguru--scienceguru-harness-guru-model-reproduce--aba77d"><strong>我们的排行榜条目</strong></a><br><sub>第 1 名 · 0.889522</sub></td>
+    <td align="center" width="280"><a href="RESULTS.md"><strong>复现实验统计</strong></a><br><sub>20 次独立复跑</sub></td>
+    <td align="center" width="280"><a href="COMPARISON.md"><strong>公开结果对比</strong></a><br><sub>已发布 Benchmark 成绩</sub></td>
   </tr>
 </table>
 
