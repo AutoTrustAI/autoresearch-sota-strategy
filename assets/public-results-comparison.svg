@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="650" viewBox="0 0 1100 650" role="img" aria-labelledby="chart-title chart-desc">
+  <title id="chart-title">Public val_bpb comparison</title>
+  <desc id="chart-desc">Horizontal bar chart comparing one reported val_bpb score for ScienceGuru, vora, Tencent Hyra, HiLoop, Recursive, Imbue Catalyst, and SkyPilot. Lower is better.</desc>
+  <style>
+    .background { fill: #ffffff; }
+    .title { fill: #111827; font: 600 28px ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+    .subtitle { fill: #4b5563; font: 400 15px ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+    .label { fill: #1f2937; font: 500 16px ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+    .value { fill: #111827; font: 600 15px ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; }
+    .tick { fill: #6b7280; font: 400 13px ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; }
+    .grid { stroke: #d1d5db; stroke-width: 1; }
+    .axis { stroke: #9ca3af; stroke-width: 1.5; }
+    .best { fill: #10b981; }
+    .peer { fill: #5b8def; }
+    @media (prefers-color-scheme: dark) {
+      .background { fill: #0d1117; }
+      .title, .label, .value { fill: #f3f4f6; }
+      .subtitle, .tick { fill: #cbd5e1; }
+      .grid { stroke: #374151; }
+      .axis { stroke: #6b7280; }
+      .best { fill: #34d399; }
+      .peer { fill: #60a5fa; }
+    }
+  </style>
+
+  <rect class="background" x="0" y="0" width="1100" height="650" />
+  <text class="title" x="32" y="42">Public val_bpb Comparison / 公开结果对比</text>
+  <text class="subtitle" x="32" y="70">Lower is better / 越低越好</text>
+
+  <line class="grid" x1="320" y1="100" x2="320" y2="530" />
+  <line class="grid" x1="460" y1="100" x2="460" y2="530" />
+  <line class="grid" x1="600" y1="100" x2="600" y2="530" />
+  <line class="grid" x1="740" y1="100" x2="740" y2="530" />
+  <line class="grid" x1="880" y1="100" x2="880" y2="530" />
+  <line class="grid" x1="1020" y1="100" x2="1020" y2="530" />
+
+  <text class="label" x="300" y="141" text-anchor="end">ScienceGuru</text>
+  <rect class="best" x="320" y="119" width="66.65" height="30" rx="4" />
+  <text class="value" x="398" y="141">0.889522</text>
+
+  <text class="label" x="300" y="199" text-anchor="end">Ensue vora</text>
+  <rect class="peer" x="320" y="177" width="139.20" height="30" rx="4" />
+  <text class="value" x="470" y="199">0.899885</text>
+
+  <text class="label" x="300" y="257" text-anchor="end">Tencent Hyra</text>
+  <rect class="peer" x="320" y="235" width="150.80" height="30" rx="4" />
+  <text class="value" x="482" y="257">0.901543</text>
+
+  <text class="label" x="300" y="315" text-anchor="end">HiLoop</text>
+  <rect class="peer" x="320" y="293" width="151.20" height="30" rx="4" />
+  <text class="value" x="483" y="315">0.9016</text>
+
+  <text class="label" x="300" y="373" text-anchor="end">Recursive</text>
+  <rect class="peer" x="320" y="351" width="216.12" height="30" rx="4" />
+  <text class="value" x="548" y="373">0.9108745</text>
+
+  <text class="label" x="300" y="431" text-anchor="end">Imbue Catalyst</text>
+  <rect class="peer" x="320" y="409" width="392.70" height="30" rx="4" />
+  <text class="value" x="724" y="431">0.9361</text>
+
+  <text class="label" x="300" y="489" text-anchor="end">SkyPilot</text>
+  <rect class="peer" x="320" y="467" width="658.00" height="30" rx="4" />
+  <text class="value" x="990" y="489">0.974</text>
+
+  <line class="axis" x1="320" y1="530" x2="1020" y2="530" />
+  <text class="tick" x="320" y="558" text-anchor="middle">0.88</text>
+  <text class="tick" x="460" y="558" text-anchor="middle">0.90</text>
+  <text class="tick" x="600" y="558" text-anchor="middle">0.92</text>
+  <text class="tick" x="740" y="558" text-anchor="middle">0.94</text>
+  <text class="tick" x="880" y="558" text-anchor="middle">0.96</text>
+  <text class="tick" x="1020" y="558" text-anchor="middle">0.98</text>
+  <text class="subtitle" x="670" y="602" text-anchor="middle">val_bpb</text>
+</svg>

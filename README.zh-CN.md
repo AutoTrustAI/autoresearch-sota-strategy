@@ -4,6 +4,8 @@
 
 > **2026-09-01 官方榜单快照：`scienceguru` 以 `val_bpb=0.889522` 排名第 1。**
 
+[AutoTrust AI Lab 官网](https://autotrust.ai) · [ScienceGuru 官网](https://scienceguru.ai) · [Autoresearch 原始仓库](https://github.com/karpathy/autoresearch) · [Autoresearch@Home benchmark 仓库](https://github.com/mutable-state-inc/autoresearch-at-home) · [Ensue 排行榜](https://www.ensue-network.ai/lab/autoresearch?view=best)
+
 本项目由 **scienceguru harness + guru turbo 1.0** 完成：ScienceGuru harness 负责实验编排、远程 B200 执行、完整性审计以及官方 claim/publish；Guru Turbo 1.0 是提出、实现和筛选训练改动的自主研究模型。仓库中的 `train.py` 是二者产出的 NanoChat 训练策略，并不是 Guru Turbo 1.0 本身。
 
 目标是在固定单 GPU、5 分钟训练预算内最小化验证集 `val_bpb`（越低越好）。仓库保留了可直接复现的最终 `train.py`、未修改的官方评估器 `prepare.py`、由 `uv.lock` 固化的环境、此前 20 次独立内部复跑统计，以及一次在正式 claim 后完成并发布的榜单复跑结果。
@@ -12,6 +14,14 @@
 > **公平对比说明：当前策略与指定的 `vora/lbx154` B200 reference 使用相同的核心评测协议与骨干配置。** 两者均使用单张 NVIDIA B200、300 秒计时训练、相同数据与 8192 BPE tokenizer、未修改的官方 `prepare.py/evaluate_bpb`、`SEED=42`、batch 72 × sequence length 2048、depth 8 × width 768，以及同一个 `val_bpb` 指标。成绩提升来自下述策略改动，而不是延长训练时间、更换评估器或使用更多 GPU。
 >
 > 这里的“相同配置”只指上述评测协议与骨干设置，并不表示依赖、实现和算法超参数逐项相同；n-gram 容量、trigram 学习率、late attention-source reuse、显存实现和相应运行时依赖正是本策略有意优化的部分。
+
+## Benchmark 的难度与重要性
+
+Autoresearch@Home 不是常规的“训练到收敛”排行榜，而是把完整研究循环压缩为一场**单 GPU、300 秒训练竞赛**：模型结构、优化器行为、数值稳定性、kernel 效率、显存布局和输入吞吐都会共同影响最终成绩。扩大模型容量可能改善学习效果，却减少有限时间内处理的 tokens；提高实现速度可以完成更多 steps，却也可能改变数值轨迹。真正有竞争力的方案必须同时推进“质量—吞吐”前沿，而不能只优化其中一端。
+
+这个 benchmark 对运行波动也十分敏感，即使固定 seed，复跑之间仍会出现可测量的吞吐和数值差异。因此，可信的进步不能只挑选一次有利结果，还需要保证源码与评估器完整、精确记录环境、审计完整日志，并通过多次复跑验证。
+
+它的重要性在于为自动化 AI 研究提供了一个快速且受控的完整闭环：**提出假设 → 修改代码 → 运行实验 → 审计结果**。固定评估器、固定时间预算和单卡约束降低了单纯堆叠算力的优势，更能检验 agent 是否具备模型与系统协同研究能力；公开源码和复现统计也有助于区分真实研究改进、评估器变化和偶然的幸运运行。
 
 ## Ensue 公开榜单成绩
 
@@ -54,6 +64,8 @@
 ## 公开结果对比
 
 以下仅是截至 2026-09-01 的公开结果快照。单次最好、均值、中位数，以及 B200 与 H100/H200 结果不能机械排名；完整硬件、统计口径和固定来源见 [COMPARISON.md](COMPARISON.md)。
+
+![公开 val_bpb 对比](assets/public-results-comparison.svg)
 
 | 团队 / 系统 | 报告的 `val_bpb` | 主要口径 | 一手来源 |
 |---|---:|---|---|

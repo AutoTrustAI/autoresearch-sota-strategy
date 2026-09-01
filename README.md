@@ -4,6 +4,8 @@
 
 > **Official leaderboard snapshot as of 2026-09-01: `scienceguru` ranks #1 with `val_bpb=0.889522`.**
 
+[AutoTrust AI Lab](https://autotrust.ai) · [ScienceGuru](https://scienceguru.ai) · [Original Autoresearch repository](https://github.com/karpathy/autoresearch) · [Autoresearch@Home benchmark repository](https://github.com/mutable-state-inc/autoresearch-at-home) · [Ensue leaderboard](https://www.ensue-network.ai/lab/autoresearch?view=best)
+
 This project was produced by **ScienceGuru harness + Guru Turbo 1.0**. The ScienceGuru harness orchestrates experiments, runs them remotely on a B200, audits integrity, and handles the official claim/publish workflow. Guru Turbo 1.0 is the autonomous research model that proposes, implements, and selects training changes. The `train.py` in this repository is the resulting NanoChat training strategy; it is not Guru Turbo 1.0 itself.
 
 The objective is to minimize validation bits per byte (`val_bpb`; lower is better) under a fixed single-GPU, five-minute training budget. This repository includes the final reproducible `train.py`, the unmodified official evaluator `prepare.py`, an environment fixed by `uv.lock`, statistics from the earlier 20 independent internal reruns, and a separate leaderboard rerun completed and published after the formal claim.
@@ -12,6 +14,14 @@ The objective is to minimize validation bits per byte (`val_bpb`; lower is bette
 > **Fair-comparison note: this strategy uses the same core evaluation protocol and backbone configuration as the specified `vora/lbx154` B200 reference.** Both use one NVIDIA B200, 300 seconds of timed training, the same data and 8,192-token BPE tokenizer, the unmodified official `prepare.py/evaluate_bpb`, `SEED=42`, batch 72 × sequence length 2,048, a depth-8 × width-768 backbone, and the same `val_bpb` metric. The gain comes from the strategy changes below, not from extending the training budget, replacing the evaluator, or using additional GPUs.
 >
 > “Same configuration” refers only to the evaluation protocol and backbone settings listed above. It does not mean that dependencies, implementation details, or algorithmic hyperparameters are identical; n-gram capacity, trigram learning rate, late attention-source reuse, memory implementation, and the supporting runtime dependencies are intentional changes in this strategy.
+
+## Why This Benchmark Is Hard and Important
+
+Autoresearch@Home is not a conventional train-to-convergence leaderboard. It compresses the research loop into a **single-GPU, 300-second training race**: architecture, optimizer behavior, numerical stability, kernel efficiency, memory layout, and input throughput all affect the final score. More model capacity can improve learning while reducing tokens processed; a faster implementation can complete more steps while changing numerical behavior. A competitive solution must improve the quality-throughput frontier rather than optimize either side in isolation.
+
+The benchmark is also sensitive enough that fixed-seed reruns still show measurable runtime and numerical variation. Credible progress therefore requires source and evaluator integrity, exact environment capture, complete log audits, and repeated runs—not just selecting one favorable number.
+
+This makes the benchmark important for automated AI research: it provides a fast, controlled testbed for the full **hypothesis → code → experiment → audit** loop. The fixed evaluator, wall-clock budget, and single-GPU constraint reduce the advantage of simply scaling compute and reward agents that can jointly reason about modeling and systems. Public code and reproducible statistics also make it possible to distinguish genuine research improvements from evaluator changes or lucky runs.
 
 ## Ensue Public Leaderboard Result
 
@@ -54,6 +64,8 @@ The two result sets are reported separately and are not combined into a 21-run c
 ## Public Results Comparison
 
 This is a snapshot of publicly reported results as of 2026-09-01. A single run, a best observation, a mean, and a median are not directly interchangeable, and B200 results should not be mechanically ranked against H100/H200 results. See [COMPARISON.md](COMPARISON.md) for the full hardware details, statistical protocols, and pinned sources.
+
+![Public val_bpb comparison](assets/public-results-comparison.svg)
 
 | Team / system | Reported `val_bpb` | Primary protocol | Primary sources |
 |---|---:|---|---|
