@@ -12,7 +12,7 @@
 >
 > The training strategy in this repo was **proposed, implemented, tested, and selected autonomously** by an AI research agent. Humans set the objective; the agent did the research.
 
-<table>
+<table width="100%">
   <tr>
     <td align="center" width="33%"><a href="https://autotrust.ai"><strong>AutoTrust AI</strong></a><br><sub>Foundation models &amp; trusted AI</sub></td>
     <td align="center" width="33%"><a href="https://scienceguru.ai"><strong>ScienceGuru</strong></a><br><sub>Autonomous research</sub></td>

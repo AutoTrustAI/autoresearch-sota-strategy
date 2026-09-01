@@ -12,7 +12,7 @@
 >
 > 本仓库中的训练策略由一个 AI 研究智能体**自主提出、实现、测试并筛选**。人类设定目标，智能体完成研究。
 
-<table>
+<table width="100%">
   <tr>
     <td align="center" width="33%"><a href="https://autotrust.ai"><strong>AutoTrust AI</strong></a><br><sub>基础模型与可信 AI</sub></td>
     <td align="center" width="33%"><a href="https://scienceguru.ai"><strong>ScienceGuru</strong></a><br><sub>自主科研平台</sub></td>
