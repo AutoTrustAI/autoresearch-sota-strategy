@@ -1,9 +1,37 @@
-# Final winner: 20-run replication
+# ScienceGuru × Guru Turbo 1.0：正式成绩与 20 次复跑
 
-## Protocol
+本页有意将两套结果分开展示：
 
-- Final `train.py` artifact:
-  `train_candidate_full_trigram2048_2048_l1bigram_compact_fp32scratch.py`
+1. **Ensue 正式成绩**来自 `scienceguru` 在 claim 后使用发布源码完成的一次全新复跑，是官方 Leaderboard 使用的数字。
+2. **此前 20 次复跑**来自同一源码、固定 seed 的 20 个独立进程，用于报告最好值、均值、方差和运行波动，不用其中的最低值替代官方成绩。
+
+实验由 **scienceguru harness + guru turbo 1.0** 完成。ScienceGuru 是实验编排与审计 harness，Guru Turbo 1.0 是自主研究模型；被评测的训练产物是本仓库的 `train.py`。
+
+## Ensue 公开榜单成绩
+
+| 字段 | 结果 |
+|---|---:|
+| Agent / 榜单快照 | `scienceguru` / **#1**（2026-09-01） |
+| Experiment key | `scienceguru--scienceguru-harness-guru-model-reproduce--aba77d` |
+| `val_bpb` | **0.889522** |
+| Steps | 3442 |
+| Tokens | 507.5M |
+| Training time | 300.1s |
+| Total time | 364.9s |
+| Peak VRAM | 176623.5 MiB（约 172.5 GiB） |
+| GPU / seed | 1×NVIDIA B200 / 42 |
+| Exit code | 0 |
+| `train.py` SHA-256 | `620a9d14eb504b0538029054716816c609bc8881db4ccfa276686ec6c7f5694c` |
+
+该实验在运行前确认单卡空闲、无配置环境变量覆盖，并校验 `train.py`、`prepare.py`、`pyproject.toml`、`uv.lock`；运行后四个文件哈希再次一致。日志中最终指标各出现一次，未发现 traceback、OOM、NaN 或异常。官方 Coordinator 已将其以 `keep` 发布为全局 best、`scienceguru` 个人 best 和 XL-tier best，且公开的 `best/train_py` SHA-256 与上表一致。
+
+公开入口：[Autoresearch@Home Leaderboard](https://www.ensue-network.ai/lab/autoresearch?view=best)、[`scienceguru` result](https://www.ensue-network.ai/lab/autoresearch?run=results%2Fscienceguru--scienceguru-harness-guru-model-reproduce--aba77d)。该分数是 Ensue Coordinator 收录的参与者公开结果，不表示平台另外完成了多 seed 复测。
+
+## 此前 20 次复跑
+
+### Protocol
+
+- Final artifact: repository `train.py`.
 - Train SHA256:
   `620a9d14eb504b0538029054716816c609bc8881db4ccfa276686ec6c7f5694c`
 - Fixed `prepare.py` SHA256:
@@ -15,10 +43,11 @@
 - Validity: training time 299.5--300.5 seconds, total time below 600 seconds,
   one complete final evaluation, exit code zero, 94.4M reported parameters,
   depth 8, and matching train/prepare hashes.
-- No result was excluded based on score or step count. No leaderboard
-  submission was made.
+- No result was excluded based on score or step count. None of these 20
+  internal runs was individually published to the leaderboard; the official
+  score above comes from the separate post-claim rerun.
 
-## Results
+### Results
 
 | Run | val_bpb | Steps | Tokens (M) | Train (s) | Total (s) | Peak VRAM (MiB) |
 |---:|---:|---:|---:|---:|---:|---:|
@@ -43,7 +72,7 @@
 | 19 | 0.890015 | 3424 | 504.9 | 300.1 | 366.9 | 176623.5 |
 | 20 | 0.889416 | 3440 | 507.2 | 300.0 | 360.4 | 176623.5 |
 
-## Statistics
+### Statistics
 
 Statistics below use the six-decimal `val_bpb` values reported by the
 benchmark. Variances were computed with a numerically stable Welford update.
@@ -69,7 +98,7 @@ descriptive OLS fit was
 `val_bpb = 1.0093273844 - 0.00003482151 * steps` (`R^2=0.57245405`).
 This is an association within fixed-time runs, not a causal estimate.
 
-## Integrity notes
+### Integrity notes
 
 - All 20 logs passed independent metric and hash checks; all had exit code 0.
 - Peak VRAM was 176623.5 MiB in every run. Training time was reported as
@@ -84,3 +113,5 @@ This is an association within fixed-time runs, not a causal estimate.
   statistics; it also had the cohort's lowest step count (3424).
 - Raw runtime logs are intentionally not included in this source-only
   repository; the table above is the audited extraction from those logs.
+
+两套结果不合并成一个 headline：**Ensue 公开榜单成绩是 `0.889522`；此前 20 次复跑单独报告 best `0.889336`、mean `0.8896563000` 和 population variance `2.776881e-8`。**
