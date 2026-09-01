@@ -1,12 +1,12 @@
 [English](README.md) | **简体中文**
 
-<p align="center">
-  <img src="assets/public-results-comparison.svg" alt="公开 val_bpb 成绩对比" width="720">
-</p>
-
 # AI 研究了自己的训练方法——并刷新了纪录
 
 ### AutoTrust AI 的 ScienceGuru harness + Guru Turbo 1.0 · 登顶 Autoresearch@Home
+
+<p align="center">
+  <img src="assets/public-results-comparison.svg" alt="公开 val_bpb 成绩对比" width="720">
+</p>
 
 > **`val_bpb = 0.889522` · Autoresearch@Home 官方排行榜第 1 名（截至 2026-09-01）· 1× NVIDIA B200 · 300 秒训练预算 · 未修改的官方评估器。**
 >
@@ -70,6 +70,12 @@ ScienceGuru harness                     Guru Turbo 1.0
 | GPU / 种子 | 1× NVIDIA B200 / 42 |
 | 退出状态 | 0 — 每项指标仅输出一次；无 OOM、NaN 或异常 |
 | `train.py` SHA-256 | `620a9d14eb504b0538029054716816c609bc8881db4ccfa276686ec6c7f5694c` |
+
+<p align="center">
+  <img src="assets/autoresearch-leaderboard-contributors.jpg" alt="Autoresearch@Home Contributors 排行榜，scienceguru 位列第一" width="345">
+  <img src="assets/autoresearch-leaderboard-best-runs.jpg" alt="Autoresearch@Home Best Runs 排行榜，scienceguru 的 val_bpb 为 0.889522" width="345">
+</p>
+<p align="center"><sub>Autoresearch@Home 官方排行榜快照：Contributors（左）与 Best Runs（右），截至 2026-09-01。</sub></p>
 
 我们交叉核验了公开结果、个人最佳、全局最佳、XL 档位最佳以及 `best/train_py`。这是由 Coordinator 记录的条目；平台不会独立执行多种子复评。
 

@@ -1,12 +1,12 @@
 **English** | [简体中文](README.zh-CN.md)
 
-<p align="center">
-  <img src="assets/public-results-comparison.svg" alt="Public val_bpb comparison" width="720">
-</p>
-
 # The AI Researched Its Own Training — and Set the Record
 
 ### AutoTrust AI's ScienceGuru harness + Guru Turbo 1.0 · Took #1 on Autoresearch@Home
+
+<p align="center">
+  <img src="assets/public-results-comparison.svg" alt="Public val_bpb comparison" width="720">
+</p>
 
 > **`val_bpb = 0.889522` · Rank #1 on the official Autoresearch@Home leaderboard (2026-09-01 snapshot) · 1× NVIDIA B200 · 300 s training budget · unmodified official evaluator.**
 >
@@ -70,6 +70,12 @@ Three things make this a meaningful RSI signal rather than a tuned leaderboard e
 | GPU / seed | 1× NVIDIA B200 / 42 |
 | Exit status | 0 — each metric emitted once; no OOM, NaN, or exception |
 | `train.py` SHA-256 | `620a9d14eb504b0538029054716816c609bc8881db4ccfa276686ec6c7f5694c` |
+
+<p align="center">
+  <img src="assets/autoresearch-leaderboard-contributors.jpg" alt="Autoresearch@Home Contributors leaderboard showing scienceguru ranked first" width="345">
+  <img src="assets/autoresearch-leaderboard-best-runs.jpg" alt="Autoresearch@Home Best Runs leaderboard showing scienceguru at val_bpb 0.889522" width="345">
+</p>
+<p align="center"><sub>Official Autoresearch@Home leaderboard snapshot: Contributors (left) and Best Runs (right), 2026-09-01.</sub></p>
 
 Public result, personal best, global best, XL-tier best, and `best/train_py` were all cross-checked. This is a Coordinator-recorded entry; the platform does not perform independent multi-seed re-evaluation.
 
