@@ -14,14 +14,14 @@
 
 <table width="100%">
   <tr>
-    <td align="center" width="280"><a href="https://autotrust.ai"><strong>AutoTrust AI</strong></a><br><sub>Foundation models &amp; trusted AI</sub></td>
-    <td align="center" width="280"><a href="https://scienceguru.ai"><strong>ScienceGuru</strong></a><br><sub>Autonomous research</sub></td>
-    <td align="center" width="280"><a href="https://www.ensue-network.ai/lab/autoresearch?view=best"><strong>Leaderboard</strong></a><br><sub>Official rankings</sub></td>
+    <td align="center" width="280"><a href="https://autotrust.ai"><strong>AutoTrust AI</strong></a><br><sub>&emsp;&emsp;&emsp;Foundation models &amp; trusted AI&emsp;&emsp;&emsp;</sub></td>
+    <td align="center" width="280"><a href="https://scienceguru.ai"><strong>ScienceGuru</strong></a><br><sub>&emsp;&emsp;&emsp;Autonomous research&emsp;&emsp;&emsp;</sub></td>
+    <td align="center" width="280"><a href="https://www.ensue-network.ai/lab/autoresearch?view=best"><strong>Leaderboard</strong></a><br><sub>&emsp;&emsp;&emsp;Official rankings&emsp;&emsp;&emsp;</sub></td>
   </tr>
   <tr>
-    <td align="center" width="280"><a href="https://www.ensue-network.ai/lab/autoresearch?run=results%2Fscienceguru--scienceguru-harness-guru-model-reproduce--aba77d"><strong>Our leaderboard entry</strong></a><br><sub>Rank #1 · 0.889522</sub></td>
-    <td align="center" width="280"><a href="RESULTS.md"><strong>Reproduction stats</strong></a><br><sub>20 independent runs</sub></td>
-    <td align="center" width="280"><a href="COMPARISON.md"><strong>Public comparison</strong></a><br><sub>Published benchmark results</sub></td>
+    <td align="center" width="280"><a href="https://www.ensue-network.ai/lab/autoresearch?run=results%2Fscienceguru--scienceguru-harness-guru-model-reproduce--aba77d"><strong>Our leaderboard entry</strong></a><br><sub>&emsp;&emsp;&emsp;Rank #1 · 0.889522&emsp;&emsp;&emsp;</sub></td>
+    <td align="center" width="280"><a href="RESULTS.md"><strong>Reproduction stats</strong></a><br><sub>&emsp;&emsp;&emsp;20 independent runs&emsp;&emsp;&emsp;</sub></td>
+    <td align="center" width="280"><a href="COMPARISON.md"><strong>Public comparison</strong></a><br><sub>&emsp;&emsp;&emsp;Published benchmark results&emsp;&emsp;&emsp;</sub></td>
   </tr>
 </table>
 
@@ -83,10 +83,9 @@ Three things make this a meaningful RSI signal rather than a tuned leaderboard e
 | `train.py` SHA-256 | `620a9d14eb504b0538029054716816c609bc8881db4ccfa276686ec6c7f5694c` |
 
 <p align="center">
-  <img src="assets/autoresearch-leaderboard-contributors.jpg" alt="Autoresearch@Home Contributors leaderboard showing scienceguru ranked first" width="345">
-  <img src="assets/autoresearch-leaderboard-best-runs.jpg" alt="Autoresearch@Home Best Runs leaderboard showing scienceguru at val_bpb 0.889522" width="345">
+  <img src="assets/autoresearch-leaderboard-overview.jpg" alt="Autoresearch@Home timeline and leaderboard showing scienceguru ranked first with val_bpb 0.889522" width="900">
 </p>
-<p align="center"><sub>Official Autoresearch@Home leaderboard snapshot: Contributors (left) and Best Runs (right), 2026-09-01.</sub></p>
+<p align="center"><sub>Official Autoresearch@Home timeline and leaderboard overview, 2026-09-01.</sub></p>
 
 Public result, personal best, global best, XL-tier best, and `best/train_py` were all cross-checked. This is a Coordinator-recorded entry; the platform does not perform independent multi-seed re-evaluation.
 

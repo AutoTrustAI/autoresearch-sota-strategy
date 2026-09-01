@@ -14,14 +14,14 @@
 
 <table width="100%">
   <tr>
-    <td align="center" width="280"><a href="https://autotrust.ai"><strong>AutoTrust AI</strong></a><br><sub>基础模型与可信 AI</sub></td>
-    <td align="center" width="280"><a href="https://scienceguru.ai"><strong>ScienceGuru</strong></a><br><sub>自主科研平台</sub></td>
-    <td align="center" width="280"><a href="https://www.ensue-network.ai/lab/autoresearch?view=best"><strong>排行榜</strong></a><br><sub>官方排名</sub></td>
+    <td align="center" width="280"><a href="https://autotrust.ai"><strong>AutoTrust AI</strong></a><br><sub>&emsp;&emsp;&emsp;基础模型与可信 AI&emsp;&emsp;&emsp;</sub></td>
+    <td align="center" width="280"><a href="https://scienceguru.ai"><strong>ScienceGuru</strong></a><br><sub>&emsp;&emsp;&emsp;自主科研平台&emsp;&emsp;&emsp;</sub></td>
+    <td align="center" width="280"><a href="https://www.ensue-network.ai/lab/autoresearch?view=best"><strong>排行榜</strong></a><br><sub>&emsp;&emsp;&emsp;官方排名&emsp;&emsp;&emsp;</sub></td>
   </tr>
   <tr>
-    <td align="center" width="280"><a href="https://www.ensue-network.ai/lab/autoresearch?run=results%2Fscienceguru--scienceguru-harness-guru-model-reproduce--aba77d"><strong>我们的排行榜条目</strong></a><br><sub>第 1 名 · 0.889522</sub></td>
-    <td align="center" width="280"><a href="RESULTS.md"><strong>复现实验统计</strong></a><br><sub>20 次独立复跑</sub></td>
-    <td align="center" width="280"><a href="COMPARISON.md"><strong>公开结果对比</strong></a><br><sub>已发布 Benchmark 成绩</sub></td>
+    <td align="center" width="280"><a href="https://www.ensue-network.ai/lab/autoresearch?run=results%2Fscienceguru--scienceguru-harness-guru-model-reproduce--aba77d"><strong>我们的排行榜条目</strong></a><br><sub>&emsp;&emsp;&emsp;第 1 名 · 0.889522&emsp;&emsp;&emsp;</sub></td>
+    <td align="center" width="280"><a href="RESULTS.md"><strong>复现实验统计</strong></a><br><sub>&emsp;&emsp;&emsp;20 次独立复跑&emsp;&emsp;&emsp;</sub></td>
+    <td align="center" width="280"><a href="COMPARISON.md"><strong>公开结果对比</strong></a><br><sub>&emsp;&emsp;&emsp;已发布 Benchmark 成绩&emsp;&emsp;&emsp;</sub></td>
   </tr>
 </table>
 
@@ -83,10 +83,9 @@ ScienceGuru harness                     Guru Turbo 1.0
 | `train.py` SHA-256 | `620a9d14eb504b0538029054716816c609bc8881db4ccfa276686ec6c7f5694c` |
 
 <p align="center">
-  <img src="assets/autoresearch-leaderboard-contributors.jpg" alt="Autoresearch@Home Contributors 排行榜，scienceguru 位列第一" width="345">
-  <img src="assets/autoresearch-leaderboard-best-runs.jpg" alt="Autoresearch@Home Best Runs 排行榜，scienceguru 的 val_bpb 为 0.889522" width="345">
+  <img src="assets/autoresearch-leaderboard-overview.jpg" alt="Autoresearch@Home 实验时间线与排行榜总览，scienceguru 以 val_bpb 0.889522 位列第一" width="900">
 </p>
-<p align="center"><sub>Autoresearch@Home 官方排行榜快照：Contributors（左）与 Best Runs（右），截至 2026-09-01。</sub></p>
+<p align="center"><sub>Autoresearch@Home 官方实验时间线与排行榜总览，截至 2026-09-01。</sub></p>
 
 我们交叉核验了公开结果、个人最佳、全局最佳、XL 档位最佳以及 `best/train_py`。这是由 Coordinator 记录的条目；平台不会独立执行多种子复评。
 
