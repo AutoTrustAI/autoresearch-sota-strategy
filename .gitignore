@@ -1,0 +1,14 @@
+.DS_Store
+__pycache__/
+*.py[cod]
+.venv/
+.cache/
+.env
+.env.*
+.autoresearch-key
+run.log
+run-*.log
+results.tsv
+build/
+dist/
+*.egg-info/
